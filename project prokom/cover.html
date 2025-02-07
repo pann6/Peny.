@@ -1,0 +1,102 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peny</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Roboto, sans-serif;
+            padding: 0px;
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            color: white;
+            text-align: center;
+            overflow: hidden; /* Prevent scrolling */
+            height: 100vh; /* Ensure body takes full viewport height */
+        }
+        .container {
+            padding: 150px;
+            position: relative;
+            height: 100%; /* Ensure container takes full height */
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .content h1 {
+            font-size: 200px;
+            margin: 20px 0;
+            color: #f4f4f4;
+        }
+        .content h1 span {
+            color: #fbc2eb;
+        }
+        .content p {
+            font-size: 30px;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+        p {
+            text-align: center;
+            color: #f4f4f4;
+        }
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+        .shape1 {
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+        }
+        .shape2 {
+            width: 400px;
+            height: 400px;
+            top: -29%;
+            left: 85%;
+        }
+        .shape3 {
+            width: 400px;
+            height: 400px;
+            top: 80%;
+            left: -10%;
+        }
+        a {
+            width: 10%;
+            padding: 10px;
+            background: #a18cd1;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+            text-decoration: none;
+            display: inline-block;
+        }
+        small {
+            padding: 10px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="content">
+           <h1>
+            Peny.
+           </h1>
+           <p>Plan Your Money Wisely</p>
+           <small>by Ghathfan F. Zam A.</small>
+           <span>
+           </span>
+           <a href="http://127.0.0.1:5000">Plan Now</a>
+        </div>
+    </div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape1"></div>
+</body>
+</html>

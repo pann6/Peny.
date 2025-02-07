@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peny</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Roboto, sans-serif;
+            padding: 10px;
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            padding: 0px;
+        }
+        .content h1 {
+            font-size: 50px;
+            margin: 20px 0;
+            color: #f4f4f4;
+
+        }
+        .content h1 span {
+            color: #fbc2eb;
+        }
+        .content p {
+            font-size: 30px;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #a18cd1;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #a18cd1;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        h2 {
+            text-align: center;
+            color: #f4f4f4;
+        }
+        p {
+            text-align: center;
+            color: #f4f4f4;
+        }
+        .result {
+            background: #a18cd1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+         .shape {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+            }
+            .shape1 {
+                width: 300px;
+                height: 300px;
+                top: 150%;
+                left: 90%;
+            }
+            .shape2 {
+                width: 400px;
+                height: 400px;
+                top: -29%;
+                left: 85%;
+            }
+            .shape3 {
+                width: 400px;
+                height: 400px;
+                top: 80%;
+                left: -10%;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>
+             Peny.
+             <span>
+             </span>
+            </h1>
+     </div>
+    </div>
+    <form method="POST">
+        <label>Biaya kos dalam sebulan (Rp) <input type="number" name="kos" required></label>
+        <label>Biaya listrik dalam sebulan (Rp) <input type="number" name="listrik" required></label>
+        <label>Biaya kuota internet sebulan (Rp) <input type="number" name="kuota" required></label>
+        <label>Biaya laundry seminggu (Rp) <input type="number" name="laundry" required></label>
+        <label>Biaya transportasi dalam seminggu (Rp) <input type="number" name="transportasi" required></label>
+        <label>Biaya makan pokok dalam sehari (Rp) <input type="number" name="makan_pokok" required></label>
+        <label>Biaya jajan dalam sehari (Rp)<input type="number" name="jajan" required></label>
+        <label>Biaya keperluan tugas kuliah dalam seminggu (Rp) <input type="number" name="tugas" required></label>
+        <label>Pemasukan pokok (Rp) <input type="number" name="pemasukan" required></label>
+        <label>Pemasukan tambahan (Rp) <input type="number" name="pemasukan_tambahan" required></label>
+        <label>Target nominal tabungan (Rp) <input type="number" name="target" required></label>
+        <label>Target waktu tercapainya tabungan (dalam bulan): <input type="number" name="waktu" required></label>
+        <button type="submit">Hitung</button>
+    </form>
+    {% if pengeluaran is not none %}
+    <div class="result">
+        <h2>Hasil</h2>
+        <p>Total Pengeluaran: Rp {{ pengeluaran }}</p>
+        <p>Total Pemasukan: Rp {{ pemasukan }}</p>
+        <p>Sisa: Rp {{ sisa }}</p>
+        <p>Target Nominal Tabungan: Rp {{ target }}</p>
+        <p>Target Waktu Tercapainya Tabungan: {{ waktu }} bulan</p>
+        <p>Sisa uang anda pada bulan depan untuk ditabung adalah Rp {{ sisa }}. Jika anda ingin menabung sejumlah Rp {{ target }} dalam waktu {{ waktu }} bulan, silahkan tambahkan pemasukan sebanyak Rp {{ tambah_kurang }} atau kurangi pengeluaran sebanyak Rp {{ tambah_kurang }} (jika memungkinkan). Jika tidak, target anda tidak akan tercapai sesuai waktu yang anda inginkan.</p>
+    </div>
+    {% endif %}
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape1"></div>
+    <div class="shape shape4"></div>
+
+</body>
+</html>
