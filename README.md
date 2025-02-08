@@ -1,2 +1,2 @@
 # Peny.
-My fisrt project in 1st semester of college at TRI SV UGM as a programmer and project manager.
+Peny.(Plan Your Money Wisely) adalah website perecnaan keuangan anak kos. Website ini adalah proyek pertama saya pada semester 1 kuliah dan saya bertanggung jawab sebagai programmer dan project manager. 
